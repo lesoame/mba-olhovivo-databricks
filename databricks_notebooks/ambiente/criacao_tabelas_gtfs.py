@@ -73,7 +73,7 @@ for arquivo in arquivos_gtfs:
          
     except Exception as e:
 
-         print(f"⚠️ Erro ao ler {arquivo}.txt: {e}")
-         print("   (Verifique se o arquivo foi subido com esse nome exato na pasta gtfs_upload)")
+         print(f" Erro ao ler {arquivo}.txt: {e}")
+         print(" (Verifique se o arquivo foi subido com esse nome exato na pasta gtfs_upload)")
 
 print("\n Processo finalizado!")
