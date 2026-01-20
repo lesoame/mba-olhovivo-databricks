@@ -172,6 +172,5 @@ sptrans-lakehouse/
 │   ├── bronze/                    # 🥉 Ingestão API -> Delta Raw
 │   ├── silver/                    # 🥈 Tratamento e Normalização
 │   └── gold/                      # 🥇 KPIs e Regras de Negócio
-├── docs/                          # 📄 Documentação auxiliar
 ├── requirements.txt               # 📦 Dependências Python
 └── README.md                      # 📘 Este arquivo
