@@ -91,6 +91,7 @@ graph TD
     KPI_Snapshot --> Streamlit_App
     KPI_Rota --> Streamlit_App
     KPI_Acessibilidade --> Streamlit_App
+```
 
 # ⚙️ Orquestração (Databricks Workflows)
 A automação do pipeline é gerenciada nativamente pelo Databricks Workflows (Jobs), sem necessidade de ferramentas externas como Airflow.
