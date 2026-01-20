@@ -148,7 +148,12 @@ Como estratégia de economia, utilizamos o metastore local do cluster (banco Der
 >
 > **Higienização:** Filtro de linhas fantasmas (velocidade sem frota ativa) para garantir precisão no dashboard.
 
-> `<br>`## 📂 Estrutura do Repositório
+```text
+<br>
+
+<br>
+
+> ## 📂 Estrutura do Repositório
 
 ```bash
 sptrans-lakehouse/
