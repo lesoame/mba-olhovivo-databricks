@@ -147,9 +147,7 @@ Como estratégia de economia, utilizamos o metastore local do cluster (banco Der
 > **Cálculo Geoespacial:** Uso da **Fórmula de Haversine** para medir a extensão real das linhas (GTFS) e cruzar com a velocidade (GPS) para estimar o tempo de viagem.
 >
 > **Higienização:** Filtro de linhas fantasmas (velocidade sem frota ativa) para garantir precisão no dashboard.
->
-
-
+<br>
 > ## 📂 Estrutura do Repositório
 
 ```bash
