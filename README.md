@@ -146,3 +146,19 @@ Como estratégia de economia, utilizamos o metastore local do cluster (banco Der
 > **Cálculo Geoespacial:** Uso da **Fórmula de Haversine** para medir a extensão real das linhas (GTFS) e cruzar com a velocidade (GPS) para estimar o tempo de viagem.
 >
 > **Higienização:** Filtro de linhas fantasmas (velocidade sem frota ativa) para garantir precisão no dashboard.
+>
+
+> ## 📂 Estrutura do Repositório
+
+```bash
+sptrans-lakehouse/
+├── app/
+│   └── app.py                     # 📊 Dashboard Streamlit + Chatbot
+├── databricks_notebooks/
+│   ├── ambiente/                  # 🛠️ Setup de Schemas (Recuperação de Metadados)
+│   ├── bronze/                    # 🥉 Ingestão API -> Delta Raw
+│   ├── silver/                    # 🥈 Tratamento e Normalização
+│   └── gold/                      # 🥇 KPIs e Regras de Negócio
+├── docs/                          # 📄 Documentação auxiliar
+├── requirements.txt               # 📦 Dependências Python
+└── README.md                      # 📘 Este arquivo
