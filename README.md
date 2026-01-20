@@ -7,7 +7,6 @@
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-red.svg)
 
-
 > **Pipeline de Engenharia de Dados End-to-End** para monitoramento da frota de ônibus de São Paulo. Integra dados de telemetria em tempo real (API Olho Vivo) com dados estáticos de planejamento (GTFS), processados em arquitetura Medallion (Bronze/Silver/Gold) no Databricks e visualizados em um Dashboard Streamlit com Chatbot.
 
 ---
@@ -94,7 +93,6 @@ graph TD
     KPI_Acessibilidade --> Streamlit_App
 ```
 
-
 ## ⚙️ Orquestração (Databricks Workflows)
 
 A automação do pipeline é gerenciada nativamente pelo **Databricks Workflows (Jobs)**, sem necessidade de ferramentas externas como Airflow.
@@ -112,6 +110,10 @@ A automação do pipeline é gerenciada nativamente pelo **Databricks Workflows 
 3. **`3_velocidade_gold`**: Calcula a média de velocidade e tempo de viagem.
 4. **`4_snapshot_mapa`**: Atualiza a última posição conhecida da frota.
 
+<br>
+<br>
+
+---
 
 ## ☁️ Estratégia de Infraestrutura e Custos (FinOps)
 
@@ -121,13 +123,16 @@ Este projeto adota uma arquitetura otimizada para reduzir custos de nuvem e lice
 > - **Dados Físicos (Parquet/Delta):** Todos os dados persistem de forma segura em um **Azure Storage Account (ADLS Gen2)**.
 > - **Metadados:** Utilizamos o **Hive Metastore (Legacy)** embutido no cluster, ao invés do Unity Catalog, para evitar custos adicionais de gerenciamento e complexidade de setup em workspace Standard.
 
-
 ### 2. Metadados Efêmeros (Cluster-Scoped)
 Como estratégia de economia, utilizamos o metastore local do cluster (banco Derby embutido).
 > - ⚠️ **Comportamento:** Quando o cluster é desligado/reiniciado, os ponteiros (schemas e definições de tabelas) desaparecem da interface visual do Catalog.
 > - 💾 **Persistência:** Os dados **não são perdidos**, pois estão salvos fisicamente no Azure Storage.
 > - 🔄 **Recuperação:** O pipeline inclui notebooks de "Ambiente" (`criacao_schemas`, `criacao_tabelas`) que recriam os ponteiros apontando para os locais existentes no Storage (`LOCATION 'abfss://...'`) sempre que o ambiente é reiniciado.
 
+<br>
+<br>
+
+---
 
 ## 🧠 Lógica de Negócio (Camadas)
 
@@ -147,13 +152,13 @@ Como estratégia de economia, utilizamos o metastore local do cluster (banco Der
 > **Cálculo Geoespacial:** Uso da **Fórmula de Haversine** para medir a extensão real das linhas (GTFS) e cruzar com a velocidade (GPS) para estimar o tempo de viagem.
 >
 > **Higienização:** Filtro de linhas fantasmas (velocidade sem frota ativa) para garantir precisão no dashboard.
-
-```text
-<br>
-
-<br>
-
+>
 > ## 📂 Estrutura do Repositório
+
+<br>
+<br>
+
+---
 
 ```bash
 sptrans-lakehouse/
