@@ -1,4 +1,4 @@
-# 🚌 SPTrans Olho Vivo | Databricks Lakehouse (Standard + GTFS)
+# 🚌 SPTrans Olho Vivo | Databricks (Standard + GTFS)
 
 ![Status](https://img.shields.io/badge/Status-Active-success.svg)
 ![Databricks](https://img.shields.io/badge/Databricks-Standard-orange.svg)
@@ -152,13 +152,12 @@ Como estratégia de economia, utilizamos o metastore local do cluster (banco Der
 > **Cálculo Geoespacial:** Uso da **Fórmula de Haversine** para medir a extensão real das linhas (GTFS) e cruzar com a velocidade (GPS) para estimar o tempo de viagem.
 >
 > **Higienização:** Filtro de linhas fantasmas (velocidade sem frota ativa) para garantir precisão no dashboard.
->
-> ## 📂 Estrutura do Repositório
 
 <br>
 <br>
 
 ---
+> ## 📂 Estrutura do Repositório
 
 ```bash
 sptrans-lakehouse/
