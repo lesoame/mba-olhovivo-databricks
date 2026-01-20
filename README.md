@@ -13,6 +13,10 @@
 
 ## 🏗️ Arquitetura e Fluxo de Dados
 
+### Latência: 15 min (Micro-batch).
+
+### Motivo: Otimização de custos (Spot Instances/Cluster Onde-demand) vs. Valor de Negócio.
+
 O projeto foi desenhado para operar com **eficiência de custos**, utilizando recursos do plano Standard do Databricks na Azure.
 
 ```mermaid
